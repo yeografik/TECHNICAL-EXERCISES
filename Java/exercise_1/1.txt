@@ -1,0 +1,4 @@
+hibernate is a java framework for interaction with database, its an ORM tool that implements JPA specifications for data 
+persistance.
+It is used in applications that interact with database, the framework provides functions, classes, etc that will simplify 
+the developement of the application.
