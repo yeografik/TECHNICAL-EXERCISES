@@ -1,0 +1,22 @@
+1) SELECT * FROM AD_Window WHERE AD_Window_ID = 100;
+
+2) UPDATE AD_Window SET Name = Concat(Name, '--') WHERE AD_Window_ID = 100;
+
+3) SELECT * FROM AD_Tab WHERE AD_Window_ID = 100;
+
+4) SELECT AD_Tab.Name, AD_Field.Name FROM AD_Tab INNER JOIN AD_Field 
+        ON AD_Tab.AD_Tab_ID = AD_Field.AD_Tab_ID AND AD_Tab.AD_Window_ID = 100 
+        ORDER BY AD_Tab.Name, AD_Field.Name;
+
+5) SELECT AD_Window.Name, COUNT(AD_Tab.AD_Tab_ID) AS TabsAmount FROM AD_Window LEFT JOIN AD_Tab
+        ON AD_Window.AD_Window_ID = AD_Tab.AD_Window_ID 
+        GROUP BY AD_Window.AD_Window_ID;
+
+6) SELECT AD_Window.*, COUNT(AD_Field.AD_Field_ID) AS FieldsAmount FROM AD_Window LEFT JOIN AD_Tab 
+		ON AD_Window.AD_Window_ID = AD_Tab.AD_Window_ID LEFT JOIN AD_Field 
+			ON AD_Field.AD_Tab_ID = AD_Tab.AD_Tab_ID GROUP BY AD_Window.AD_Window_ID;
+
+7) SELECT AD_Window.* FROM AD_Window LEFT JOIN AD_Tab
+        ON AD_Window.AD_Window_ID = AD_Tab.AD_Window_ID 
+        GROUP BY AD_Window.AD_Window_ID
+        HAVING COUNT(AD_Tab.AD_Tab_ID) > 5;
