@@ -1,0 +1,43 @@
+1) - They are the parameters of a component.
+   - It is a mechanism to put data inside the component.
+
+2) - An element that returns a function or class.
+
+3) - Class Component.
+   - Parent Component.
+   - Child Component.
+
+4) - It is the mix between pure HTML and javascript , for this reason JSX is used to identify React syntax.
+
+5) - Using props.
+   - Through the use of states.
+   - Referring the child component to the values of the parent component.
+
+6) - setValue(“my value”)
+
+7) - Two arguments, which are the effect and the dependencies.
+
+8) - import name from 'name';
+
+9) - It is a functionality that facilitates the handling of data from parent components to child components.
+
+10) - import { MyComponent } from './MyComponent.js'; 
+
+11) functional components have less code, then they are simpler to create, read and test, but they lack of state and lifecycle hooks, 
+    they are just plain javascript functions.
+    on the other hand class components have a more complicated syntax because they have more code, but they have state and lifecycle hooks
+    because they inherit from React.Component
+
+12) i would use the setState() method
+
+13) the render() method is called along with all the other lifecycle methods, of course this happens if we have changed the state through the 
+    setState() method
+
+17) its a counter that starts in 1 and increments by 1 each time a click is done, the onClick function receives a value as parameter and
+    sets the state as the parameter + 1, then in the html we see that state which is the counter is shown and when a click is done, the
+    onClick function is called with state as parameter, thus it increments by one
+
+18) i would use XMLHttpRequest or Fetch to make Rest API calls
+
+19) it is to add side effects on each render, in other words, it's a function that its triggered when a render is done, it can be 
+    configured with parameters to decide if it should be executed on each render or under certain conditions

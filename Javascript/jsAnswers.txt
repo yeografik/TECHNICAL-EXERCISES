@@ -1,0 +1,8 @@
+1) first output is the result of the function which is 25
+    
+    second output is of the same function and it is 81
+    
+    third output is the number of calls, 2 because the function was called 2 times with the previous calls
+    
+    fourth output is undefined, thats because we are trying to print a local variable from another function, 
+    when the execution of that funciton ends that variable is not reachable in the stack anymore
